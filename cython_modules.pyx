@@ -7,3 +7,12 @@ def fib(n: int, memo: list[int]):
 		result = fib(n - 1) + fib(n - 2)
 		memo[n] = result
 	return memo[n]
+
+def parser(s):
+	ret = ""
+	for c in s:
+		try:
+			ret += str(int(c))
+		except ValueError:
+			ret += ""
+	return int(ret)
